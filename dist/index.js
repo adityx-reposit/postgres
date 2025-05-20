@@ -23,6 +23,7 @@ app.post("/signup", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     const email = req.body.email;
     const password = req.body.password;
     const response = yield user.query(`INSERT into users(username,email,password) VALUES('${username}','${email}','${password}')`);
+    console.log(response);
     res.json({
         message: "you have successfully registered"
     });

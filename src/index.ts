@@ -17,11 +17,13 @@ app.post("/signup",async(req,res)=>{
 
 
     const response=await user.query(`INSERT into users(username,email,password) VALUES('${username}','${email}','${password}')`)
-   res.json({
+     console.log(response);
+     
+   
+    res.json({
         
         message:"you have successfully registered"
     })
-    
 
 })
 
